@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réplica Portal de Notícias</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portal de Notícias</title>
+    <style>
+        /* O CSS PRECISA FICAR AQUI DENTRO DA TAG STYLE */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background-color: #f0f0f0; padding: 20px; }
+        .container { max-width: 1000px; margin: 0 auto; background-color: white; overflow: hidden; }
+        .main-news { 
+            background-image: linear-gradient(transparent, rgba(0,0,0,0.9)), url('https://s2-g1.glbimg.com/uG96tB_8p_Z6mE8u0-9-o_3zYf0=/0x0:1000x500/vignette/s.glbimg.com/jo/g1/f/original/2024/01/noticia.jpg'); 
+            background-size: cover; height: 450px; display: flex; flex-direction: column; justify-content: flex-end; color: white;
+        }
+        .main-content { padding: 20px; }
+        .sub-bar { background-color: #c4170c; padding: 15px; color: white; }
+        .sub-bar ul { display: flex; list-style: none; gap: 20px; }
+        .sub-bar li { flex: 1; font-size: 13px; font-weight: bold; border-left: 1px solid #e06d66; padding-left: 10px; }
+        .sub-bar li:first-child { border-left: none; }
+        .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px; }
+        .card img { width: 100%; border-radius: 4px; }
+        .card h2 { font-size: 18px; color: #c4170c; margin: 10px 0; line-height: 1.2; }
+        .card p { font-size: 13px; color: #666; font-weight: bold; }
+        .card p::before { content: "• "; color: #c4170c; }
+    </style>
 </head>
 <body>
-
-    <main class="container">
+    <div class="container">
         <section class="main-news">
             <div class="main-content">
                 <h1>Trump afirma que 'tudo foi destruído' no Irã e promete 3ª onda de ataques</h1>
@@ -23,118 +41,22 @@
         </section>
 
         <section class="news-grid">
-            <article class="card">
-                <img src="https://via.placeholder.com/300x180" alt="Notícia 1">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x180" alt="Notícia">
                 <h2>Multidão no Irã vai a funeral de crianças; ONU pede apuração</h2>
                 <p>Escalada nuclear pode ser fatal, diz especialista</p>
-            </article>
-
-            <article class="card">
-                <img src="https://via.placeholder.com/300x180" alt="Notícia 2">
-                <h2 class="alert">Trump ameaça usar bases da Espanha sem autorização</h2>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x180" alt="Notícia">
+                <h2>Trump ameaça usar bases da Espanha sem autorização</h2>
                 <p>O que está por trás do conflito entre EUA e Irã?</p>
-            </article>
-
-            <article class="card">
-                <img src="https://via.placeholder.com/300x180" alt="Notícia 3">
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x180" alt="Notícia">
                 <h2>Valores da guerra: drones de US$ 20 mil x mísseis de US$ 4 mi</h2>
                 <p>Emirados criam corredor de segurança para voos</p>
-            </article>
+            </div>
         </section>
-    </main>
-
+    </div>
 </body>
 </html>
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #f0f0f0;
-    padding: 20px;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: white;
-}
-
-/* Notícia Principal */
-.main-news {
-    background-image: linear-gradient(transparent, rgba(0,0,0,0.8)), url('https://via.placeholder.com/1000x500');
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: white;
-}
-
-.main-content {
-    padding: 20px;
-}
-
-.main-content h1 {
-    font-size: 32px;
-    font-weight: bold;
-    max-width: 80%;
-}
-
-.sub-bar {
-    background-color: #c4170c; /* Vermelho característico */
-    padding: 15px;
-}
-
-.sub-bar ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    gap: 15px;
-}
-
-.sub-bar li {
-    font-size: 14px;
-    font-weight: bold;
-    flex: 1;
-    border-left: 1px solid rgba(255,255,255,0.3);
-    padding-left: 10px;
-}
-
-.sub-bar li:first-child { border-left: none; }
-
-/* Grid de Notícias */
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.card h2 {
-    font-size: 18px;
-    color: #c4170c;
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 14px;
-    color: #444;
-}
-
-.card p::before {
-    content: "• ";
-    color: #c4170c;
-}
